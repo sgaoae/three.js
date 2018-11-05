@@ -4,125 +4,122 @@
 /* global QUnit */
 
 import { KeyframeTrack } from '../../../../src/animation/KeyframeTrack';
-import { KeyframeTrackConstructor } from '../../../../src/animation/KeyframeTrackConstructor'; // Todo: why so pain ?
-import { KeyframeTrackPrototype } from '../../../../src/animation/KeyframeTrackPrototype'; // Todo: why so pain ?
+import { NumberKeyframeTrack } from '../../../../src/animation/tracks/NumberKeyframeTrack';
 
 export default QUnit.module( 'Animation', () => {
 
-	QUnit.module.todo( 'KeyframeTrack', () => {
+	QUnit.module( 'KeyframeTrack', () => {
 
 		// INSTANCING
-		QUnit.test( "Instancing", ( assert ) => {
+		QUnit.todo( "Instancing", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// STATIC STUFF
-		QUnit.test( "parse", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		QUnit.test( "toJSON", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		QUnit.test( "_getTrackTypeForValueTypeName", ( assert ) => {
+		QUnit.todo( "toJSON", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// PUBLIC STUFF
-		QUnit.test( "TimeBufferType", ( assert ) => {
+		QUnit.todo( "TimeBufferType", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
-		QUnit.test( "ValueBufferType", ( assert ) => {
+		QUnit.todo( "ValueBufferType", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
-		QUnit.test( "DefaultInterpolation", ( assert ) => {
+		QUnit.todo( "DefaultInterpolation", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
-		QUnit.test( "InterpolantFactoryMethodDiscrete", ( assert ) => {
+		QUnit.todo( "InterpolantFactoryMethodDiscrete", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
-		QUnit.test( "InterpolantFactoryMethodLinear", ( assert ) => {
+		QUnit.todo( "InterpolantFactoryMethodLinear", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
-		QUnit.test( "InterpolantFactoryMethodSmooth", ( assert ) => {
+		QUnit.todo( "InterpolantFactoryMethodSmooth", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
-		QUnit.test( "setInterpolation", ( assert ) => {
+		QUnit.todo( "setInterpolation", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
-		QUnit.test( "getInterpolation", ( assert ) => {
+		QUnit.todo( "getInterpolation", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
-		QUnit.test( "getValueSize", ( assert ) => {
+		QUnit.todo( "getValueSize", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
-		QUnit.test( "shift", ( assert ) => {
+		QUnit.todo( "shift", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
-		QUnit.test( "scale", ( assert ) => {
+		QUnit.todo( "scale", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
-		QUnit.test( "trim", ( assert ) => {
+		QUnit.todo( "trim", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
-		QUnit.test( "validate", ( assert ) => {
+		QUnit.test( 'validate', ( assert ) => {
 
-			assert.ok( false, "everything's gonna be alright" );
+			var validTrack = new NumberKeyframeTrack( '.material.opacity', [ 0, 1 ], [ 0, 0.5 ] );
+			var invalidTrack = new NumberKeyframeTrack( '.material.opacity', [ 0, 1 ], [ 0, NaN ] );
+
+			assert.ok( validTrack.validate() );
+			assert.notOk( invalidTrack.validate() );
 
 		} );
 
-		QUnit.test( "optimize", ( assert ) => {
+		QUnit.test( 'optimize', ( assert ) => {
 
-			assert.ok( false, "everything's gonna be alright" );
+			var track = new NumberKeyframeTrack( '.material.opacity', [ 0, 1, 2, 3, 4 ], [ 0, 0, 0, 0, 1 ] );
+
+			assert.equal( track.values.length, 5 );
+
+			track.optimize();
+
+			assert.smartEqual( Array.from( track.times ), [ 0, 3, 4 ] );
+			assert.smartEqual( Array.from( track.values ), [ 0, 0, 1 ] );
 
 		} );
 
 	} );
 
 } );
-

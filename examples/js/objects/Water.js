@@ -7,9 +7,9 @@
  * @author Jonas Wagner / http://29a.ch/ && http://29a.ch/slides/2012/webglwater/ : Water shader explanations in WebGL
  */
 
-THREE.Water = function ( width, height, options ) {
+THREE.Water = function ( geometry, options ) {
 
-	THREE.Mesh.call( this, new THREE.PlaneBufferGeometry( width, height ) );
+	THREE.Mesh.call( this, geometry );
 
 	var scope = this;
 
@@ -75,7 +75,6 @@ THREE.Water = function ( width, height, options ) {
 				time: { value: 0.0 },
 				size: { value: 1.0 },
 				distortionScale: { value: 20.0 },
-				noiseScale: { value: 1.0 },
 				textureMatrix: { value: new THREE.Matrix4() },
 				sunColor: { value: new THREE.Color( 0x7F7F7F ) },
 				sunDirection: { value: new THREE.Vector3( 0.70707, 0.70707, 0 ) },
@@ -145,7 +144,7 @@ THREE.Water = function ( width, height, options ) {
 			THREE.ShaderChunk[ 'packing' ],
 			THREE.ShaderChunk[ 'bsdfs' ],
 			THREE.ShaderChunk[ 'fog_pars_fragment' ],
-			THREE.ShaderChunk[ 'lights_pars' ],
+			THREE.ShaderChunk[ 'lights_pars_begin' ],
 			THREE.ShaderChunk[ 'shadowmap_pars_fragment' ],
 			THREE.ShaderChunk[ 'shadowmask_pars_fragment' ],
 
@@ -163,7 +162,7 @@ THREE.Water = function ( width, height, options ) {
 			'	float distance = length(worldToEye);',
 
 			'	vec2 distortion = surfaceNormal.xz * ( 0.001 + 1.0 / distance ) * distortionScale;',
-			'	vec3 reflectionSample = vec3( texture2D( mirrorSampler, mirrorCoord.xy / mirrorCoord.z + distortion ) );',
+			'	vec3 reflectionSample = vec3( texture2D( mirrorSampler, mirrorCoord.xy / mirrorCoord.w + distortion ) );',
 
 			'	float theta = max( dot( eyeDirection, surfaceNormal ), 0.0 );',
 			'	float rf0 = 0.3;',

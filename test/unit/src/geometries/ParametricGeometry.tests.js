@@ -10,12 +10,10 @@ import {
 
 export default QUnit.module( 'Geometries', () => {
 
-	QUnit.module.todo( 'ParametricGeometry', ( hooks ) => {
+	QUnit.module( 'ParametricGeometry', ( hooks ) => {
 
 		var geometries = undefined;
 		hooks.beforeEach( function () {
-
-			const parameters = {};
 
 			geometries = [
 				new ParametricGeometry()
@@ -24,34 +22,32 @@ export default QUnit.module( 'Geometries', () => {
 		} );
 
 		// INHERITANCE
-		QUnit.test( "Extending", ( assert ) => {
+		QUnit.todo( "Extending", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// INSTANCING
-		QUnit.test( "Instancing", ( assert ) => {
+		QUnit.todo( "Instancing", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// OTHERS
-		QUnit.test( 'Standard geometry tests', ( assert ) => {
+		QUnit.todo( 'Standard geometry tests', ( assert ) => {
 
-			runStdGeometryTests( assert, geometries );
+			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 	} );
 
-	QUnit.module.todo( 'ParametricBufferGeometry', ( hooks ) => {
+	QUnit.module( 'ParametricBufferGeometry', ( hooks ) => {
 
 		var geometries = undefined;
 		hooks.beforeEach( function () {
-
-			const parameters = {};
 
 			geometries = [
 				new ParametricBufferGeometry()
@@ -60,23 +56,23 @@ export default QUnit.module( 'Geometries', () => {
 		} );
 
 		// INHERITANCE
-		QUnit.test( "Extending", ( assert ) => {
+		QUnit.todo( "Extending", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// INSTANCING
-		QUnit.test( "Instancing", ( assert ) => {
+		QUnit.todo( "Instancing", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// OTHERS
-		QUnit.test( 'Standard geometry tests', ( assert ) => {
+		QUnit.todo( 'Standard geometry tests', ( assert ) => {
 
-			runStdGeometryTests( assert, geometries );
+			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 

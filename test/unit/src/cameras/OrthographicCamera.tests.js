@@ -8,42 +8,42 @@ import { OrthographicCamera } from '../../../../src/cameras/OrthographicCamera';
 
 export default QUnit.module( 'Cameras', () => {
 
-	QUnit.module.todo( 'OrthographicCamera', () => {
+	QUnit.module( 'OrthographicCamera', () => {
 
 		// INHERITANCE
-		QUnit.test( "Extending", ( assert ) => {
+		QUnit.todo( "Extending", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// INSTANCING
-		QUnit.test( "Instancing", ( assert ) => {
+		QUnit.todo( "Instancing", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// PUBLIC STUFF
-		QUnit.test( "isOrthographicCamera", ( assert ) => {
+		QUnit.todo( "isOrthographicCamera", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
-		QUnit.test( "copy", ( assert ) => {
+		QUnit.todo( "copy", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
-		QUnit.test( "setViewOffset", ( assert ) => {
+		QUnit.todo( "setViewOffset", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
-		QUnit.test( "clearViewOffset", ( assert ) => {
+		QUnit.todo( "clearViewOffset", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
@@ -54,7 +54,7 @@ export default QUnit.module( 'Cameras', () => {
 			var left = - 1, right = 1, top = 1, bottom = - 1, near = 1, far = 3;
 			var cam = new OrthographicCamera( left, right, top, bottom, near, far );
 
-			// updateProjectionMatrix is called in contructor
+			// updateProjectionMatrix is called in constructor
 			var pMatrix = cam.projectionMatrix.elements;
 
 			// orthographic projection is given my the 4x4 Matrix
@@ -72,7 +72,7 @@ export default QUnit.module( 'Cameras', () => {
 
 		} );
 
-		QUnit.test( "toJSON", ( assert ) => {
+		QUnit.todo( "toJSON", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 

@@ -9,7 +9,7 @@ import { eps } from './Constants.tests';
 
 export default QUnit.module( 'Maths', () => {
 
-	QUnit.module.todo( 'Color', () => {
+	QUnit.module( 'Color', () => {
 
 		// INSTANCING
 		QUnit.test( "Instancing", ( assert ) => {
@@ -29,7 +29,7 @@ export default QUnit.module( 'Maths', () => {
 		} );
 
 		// PUBLIC STUFF
-		QUnit.test( "isColor", ( assert ) => {
+		QUnit.todo( "isColor", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
@@ -53,7 +53,7 @@ export default QUnit.module( 'Maths', () => {
 
 		} );
 
-		QUnit.test( "setScalar", ( assert ) => {
+		QUnit.todo( "setScalar", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
@@ -67,7 +67,7 @@ export default QUnit.module( 'Maths', () => {
 
 		} );
 
-		QUnit.test( "setRGB", ( assert ) => {
+		QUnit.todo( "setRGB", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
@@ -76,8 +76,9 @@ export default QUnit.module( 'Maths', () => {
 		QUnit.test( "setHSL", ( assert ) => {
 
 			var c = new Color();
+			var hsl = { h: 0, s: 0, l: 0 };
 			c.setHSL( 0.75, 1.0, 0.25 );
-			var hsl = c.getHSL();
+			c.getHSL( hsl );
 
 			assert.ok( hsl.h == 0.75, "hue: " + hsl.h );
 			assert.ok( hsl.s == 1.00, "saturation: " + hsl.s );
@@ -85,7 +86,7 @@ export default QUnit.module( 'Maths', () => {
 
 		} );
 
-		QUnit.test( "setStyle", ( assert ) => {
+		QUnit.todo( "setStyle", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
@@ -99,7 +100,7 @@ export default QUnit.module( 'Maths', () => {
 
 		} );
 
-		QUnit.test( "copy", ( assert ) => {
+		QUnit.todo( "copy", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
@@ -170,7 +171,8 @@ export default QUnit.module( 'Maths', () => {
 		QUnit.test( "getHSL", ( assert ) => {
 
 			var c = new Color( 0x80ffff );
-			var hsl = c.getHSL();
+			var hsl = { h: 0, s: 0, l: 0 };
+			c.getHSL( hsl );
 
 			assert.ok( hsl.h == 0.5, "hue: " + hsl.h );
 			assert.ok( hsl.s == 1.0, "saturation: " + hsl.s );
@@ -211,7 +213,7 @@ export default QUnit.module( 'Maths', () => {
 
 		} );
 
-		QUnit.test( "addColors", ( assert ) => {
+		QUnit.todo( "addColors", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 

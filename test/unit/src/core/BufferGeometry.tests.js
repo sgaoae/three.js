@@ -6,7 +6,6 @@
 
 import { BufferGeometry } from '../../../../src/core/BufferGeometry';
 import { JSONLoader } from '../../../../src/loaders/JSONLoader';
-import { arrayMax } from '../../../../src/utils';
 import { DirectGeometry } from '../../../../src/core/DirectGeometry';
 import {
 	BufferAttribute,
@@ -22,7 +21,7 @@ import { Geometry } from '../../../../src/core/Geometry';
 import { Face3 } from '../../../../src/core/Face3';
 import { Mesh } from '../../../../src/objects/Mesh';
 import { Color } from '../../../../src/math/Color';
-import { LineSegments as Line } from '../../../../src/objects/LineSegments.js';
+import { Line } from '../../../../src/objects/Line.js';
 import {
 	x,
 	y,
@@ -124,24 +123,24 @@ function compareUvs( uvs, u ) {
 
 export default QUnit.module( 'Core', () => {
 
-	QUnit.module.todo( 'BufferGeometry', () => {
+	QUnit.module( 'BufferGeometry', () => {
 
 		// INHERITANCE
-		QUnit.test( "Extending", ( assert ) => {
+		QUnit.todo( "Extending", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// INSTANCING
-		QUnit.test( "Instancing", ( assert ) => {
+		QUnit.todo( "Instancing", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// PUBLIC STUFF
-		QUnit.test( "isBufferGeometry", ( assert ) => {
+		QUnit.todo( "isBufferGeometry", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
@@ -167,11 +166,12 @@ export default QUnit.module( 'Core', () => {
 
 		} );
 
-		QUnit.test( "getAttribute", ( assert ) => {
+		QUnit.todo( "getAttribute", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
+
 		QUnit.test( "add / delete Attribute", ( assert ) => {
 
 			var geometry = new BufferGeometry();
@@ -214,7 +214,7 @@ export default QUnit.module( 'Core', () => {
 			assert.strictEqual( a.groups.length, 0, "Check groups were deleted correctly" );
 
 		} );
-		QUnit.test( "clearGroups", ( assert ) => {
+		QUnit.todo( "clearGroups", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
@@ -547,6 +547,13 @@ export default QUnit.module( 'Core', () => {
 
 		QUnit.test( "fromGeometry/fromDirectGeometry", ( assert ) => {
 
+			if ( typeof XMLHttpRequest === 'undefined' ) {
+
+				assert.expect( 0 );
+				return;
+
+			}
+
 			assert.timeout( 1000 );
 
 			var a = new BufferGeometry();
@@ -602,15 +609,6 @@ export default QUnit.module( 'Core', () => {
 
 				}
 
-				if ( geometry.indices.length > 0 ) {
-
-					var TypeArray = arrayMax( geometry.indices ) > 65535 ? Uint32Array : Uint16Array;
-					var indices = new TypeArray( geometry.indices.length * 3 );
-					attr = new BufferAttribute( indices, 1 ).copyIndicesArray( geometry.indices );
-					assert.ok( bufferAttributeEquals( a.indices, attr ), "Indices are identical" );
-
-				}
-
 				// groups
 				assert.deepEqual( a.groups, geometry.groups, "Groups are identical" );
 
@@ -656,9 +654,6 @@ export default QUnit.module( 'Core', () => {
 
 				}
 
-				// TODO
-				// DirectGeometry doesn't actually copy boundingSphere and boundingBox yet,
-				// so they're always null
 				if ( geometry.boundingSphere !== null ) {
 
 					assert.ok( a.boundingSphere.equals( geometry.boundingSphere ), "BoundingSphere is identical" );
@@ -706,7 +701,7 @@ export default QUnit.module( 'Core', () => {
 
 		} );
 
-		QUnit.test( "computeFaceNormals", ( assert ) => {
+		QUnit.todo( "computeFaceNormals", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
@@ -824,7 +819,7 @@ export default QUnit.module( 'Core', () => {
 
 		} );
 
-		QUnit.test( "normalizeNormals", ( assert ) => {
+		QUnit.todo( "normalizeNormals", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
@@ -966,7 +961,7 @@ export default QUnit.module( 'Core', () => {
 
 		} );
 
-		QUnit.test( "dispose", ( assert ) => {
+		QUnit.todo( "dispose", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 

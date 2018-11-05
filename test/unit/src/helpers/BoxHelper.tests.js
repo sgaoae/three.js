@@ -4,6 +4,7 @@
  */
 /* global QUnit */
 
+import { runStdGeometryTests } from '../../qunit-utils';
 import { BoxHelper } from '../../../../src/helpers/BoxHelper';
 import { BoxGeometry } from '../../../../src/geometries/BoxGeometry';
 import { SphereGeometry } from '../../../../src/geometries/SphereGeometry';
@@ -11,7 +12,7 @@ import { Mesh } from '../../../../src/objects/Mesh';
 
 export default QUnit.module( 'Helpers', () => {
 
-	QUnit.module.todo( 'BoxHelper', ( hooks ) => {
+	QUnit.module( 'BoxHelper', ( hooks ) => {
 
 		var geometries = undefined;
 		hooks.beforeEach( function () {
@@ -42,27 +43,27 @@ export default QUnit.module( 'Helpers', () => {
 		} );
 
 		// INHERITANCE
-		QUnit.test( "Extending", ( assert ) => {
+		QUnit.todo( "Extending", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// INSTANCING
-		QUnit.test( "Instancing", ( assert ) => {
+		QUnit.todo( "Instancing", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// PUBLIC STUFF
-		QUnit.test( "update", ( assert ) => {
+		QUnit.todo( "update", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
-		QUnit.test( "setFromObject", ( assert ) => {
+		QUnit.todo( "setFromObject", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 

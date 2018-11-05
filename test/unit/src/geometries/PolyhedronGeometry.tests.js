@@ -3,6 +3,7 @@
  */
 /* global QUnit */
 
+import { runStdGeometryTests } from '../../qunit-utils';
 import {
 	PolyhedronGeometry,
 	PolyhedronBufferGeometry
@@ -10,28 +11,34 @@ import {
 
 export default QUnit.module( 'Geometries', () => {
 
-	QUnit.module.todo( 'PolyhedronGeometry', ( hooks ) => {
+	QUnit.module( 'PolyhedronGeometry', ( hooks ) => {
 
 		var geometries = undefined;
 		hooks.beforeEach( function () {
 
-			const parameters = {};
+			var vertices = [
+				1, 1, 1, 	- 1, - 1, 1, 	- 1, 1, - 1, 	1, - 1, - 1
+			];
+
+			var indices = [
+				2, 1, 0, 	0, 3, 2,	1, 3, 0,	2, 3, 1
+			];
 
 			geometries = [
-				new PolyhedronGeometry()
+				new PolyhedronGeometry( vertices, indices )
 			];
 
 		} );
 
 		// INHERITANCE
-		QUnit.test( "Extending", ( assert ) => {
+		QUnit.todo( "Extending", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// INSTANCING
-		QUnit.test( "Instancing", ( assert ) => {
+		QUnit.todo( "Instancing", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
@@ -46,28 +53,34 @@ export default QUnit.module( 'Geometries', () => {
 
 	} );
 
-	QUnit.module.todo( 'PolyhedronBufferGeometry', ( hooks ) => {
+	QUnit.module( 'PolyhedronBufferGeometry', ( hooks ) => {
 
 		var geometries = undefined;
 		hooks.beforeEach( function () {
 
-			const parameters = {};
+			var vertices = [
+				1, 1, 1, 	- 1, - 1, 1, 	- 1, 1, - 1, 	1, - 1, - 1
+			];
+
+			var indices = [
+				2, 1, 0, 	0, 3, 2,	1, 3, 0,	2, 3, 1
+			];
 
 			geometries = [
-				new PolyhedronBufferGeometry()
+				new PolyhedronBufferGeometry( vertices, indices )
 			];
 
 		} );
 
 		// INHERITANCE
-		QUnit.test( "Extending", ( assert ) => {
+		QUnit.todo( "Extending", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// INSTANCING
-		QUnit.test( "Instancing", ( assert ) => {
+		QUnit.todo( "Instancing", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 

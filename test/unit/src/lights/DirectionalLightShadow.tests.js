@@ -4,21 +4,23 @@
  */
 /* global QUnit */
 
+import { ObjectLoader } from '../../../../src/loaders/ObjectLoader';
+import { DirectionalLight } from '../../../../src/lights/DirectionalLight';
 import { DirectionalLightShadow } from '../../../../src/lights/DirectionalLightShadow';
 
 export default QUnit.module( 'Lights', () => {
 
-	QUnit.module.todo( 'DirectionalLightShadow', () => {
+	QUnit.module( 'DirectionalLightShadow', () => {
 
 		// INHERITANCE
-		QUnit.test( "Extending", ( assert ) => {
+		QUnit.todo( "Extending", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// INSTANCING
-		QUnit.test( "Instancing", ( assert ) => {
+		QUnit.todo( "Instancing", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 

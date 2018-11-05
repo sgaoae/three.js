@@ -8,7 +8,7 @@ import { Interpolant } from '../../../../src/math/Interpolant';
 
 export default QUnit.module( 'Maths', () => {
 
-	QUnit.module.todo( 'Interpolant', () => {
+	QUnit.module( 'Interpolant', () => {
 
 		// Since this is an abstract base class, we have to make it concrete in order
 		// to QUnit.test its functionality...
@@ -23,27 +23,58 @@ export default QUnit.module( 'Maths', () => {
 
 		Mock.prototype.intervalChanged_ = function intervalChanged( i1, t0, t1 ) {
 
-			Mock.captureCall( arguments );
+			if ( Mock.calls !== null ) {
+
+				Mock.calls.push( {
+					func: 'intervalChanged',
+					args: [ i1, t0, t1 ]
+				} );
+
+			}
 
 		};
 
 		Mock.prototype.interpolate_ = function interpolate( i1, t0, t, t1 ) {
 
-			Mock.captureCall( arguments );
+			if ( Mock.calls !== null ) {
+
+				Mock.calls.push( {
+					func: 'interpolate',
+					args: [ i1, t0, t, t1 ]
+				} );
+
+			}
+
 			return this.copySampleValue_( i1 - 1 );
 
 		};
 
 		Mock.prototype.beforeStart_ = function beforeStart( i, t, t0 ) {
 
-			Mock.captureCall( arguments );
+			if ( Mock.calls !== null ) {
+
+				Mock.calls.push( {
+					func: 'beforeStart',
+					args: [ i, t, t0 ]
+				} );
+
+			}
+
 			return this.copySampleValue_( i );
 
 		};
 
 		Mock.prototype.afterEnd_ = function afterEnd( i, tN, t ) {
 
-			Mock.captureCall( arguments );
+			if ( Mock.calls !== null ) {
+
+				Mock.calls.push( {
+					func: 'afterEnd',
+					args: [ i, tN, t ]
+				} );
+
+			}
+
 			return this.copySampleValue_( i );
 
 		};
@@ -68,32 +99,20 @@ export default QUnit.module( 'Maths', () => {
 		// Tests
 
 		// INSTANCING
-		QUnit.test( "Instancing", ( assert ) => {
+		QUnit.todo( "Instancing", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// PUBLIC STUFF
-		QUnit.test( "evaluate", ( assert ) => {
+		QUnit.todo( "evaluate", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// PRIVATE STUFF
-		QUnit.test( "DefaultSettings_", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
-		QUnit.test( "getSettings_", ( assert ) => {
-
-			assert.ok( false, "everything's gonna be alright" );
-
-		} );
-
 		QUnit.test( "copySampleValue_", ( assert ) => {
 
 			var interpolant = new Mock( null, [ 1, 11, 2, 22, 3, 33 ], 2, [] );

@@ -11,7 +11,7 @@ import { Vector4 } from '../../../../src/math/Vector4';
 
 export default QUnit.module( 'Core', () => {
 
-	QUnit.module.todo( 'BufferAttribute', () => {
+	QUnit.module( 'BufferAttribute', () => {
 
 		// INSTANCING
 		QUnit.test( "Instancing", ( assert ) => {
@@ -29,14 +29,14 @@ export default QUnit.module( 'Core', () => {
 		} );
 
 		// PROPERTIES
-		QUnit.test( "needsUpdate", ( assert ) => {
+		QUnit.todo( "needsUpdate", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// PUBLIC STUFF
-		QUnit.test( "isBufferAttribute", ( assert ) => {
+		QUnit.todo( "isBufferAttribute", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
@@ -64,7 +64,7 @@ export default QUnit.module( 'Core', () => {
 
 		} );
 
-		QUnit.test( "setDynamic", ( assert ) => {
+		QUnit.todo( "setDynamic", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
@@ -127,29 +127,6 @@ export default QUnit.module( 'Core', () => {
 			var i = attr.array;
 			assert.ok( i[ 0 ] === 0 && i[ 1 ] === 0.5 && i[ 2 ] === 1, 'first color was copied correctly' );
 			assert.ok( i[ 3 ] === 0.25 && i[ 4 ] === 1 && i[ 5 ] === 0, 'second color was copied correctly' );
-
-		} );
-
-		QUnit.test( "copyIndicesArray", ( assert ) => {
-
-			var attr = new BufferAttribute( new Float32Array( 6 ), 3 );
-
-			attr.copyIndicesArray( [
-				{
-					a: 1,
-					b: 2,
-					c: 3
-				},
-				{
-					a: 4,
-					b: 5,
-					c: 6
-				}
-			] );
-
-			var i = attr.array;
-			assert.ok( i[ 0 ] === 1 && i[ 1 ] === 2 && i[ 2 ] === 3, 'first indices were copied correctly' );
-			assert.ok( i[ 3 ] === 4 && i[ 4 ] === 5 && i[ 5 ] === 6, 'second indices were copied correctly' );
 
 		} );
 
@@ -299,17 +276,17 @@ export default QUnit.module( 'Core', () => {
 
 	} );
 
-	QUnit.module.todo( 'Int8BufferAttribute', () => {
+	QUnit.module( 'Int8BufferAttribute', () => {
 
 		// INHERITANCE
-		QUnit.test( "Extending", ( assert ) => {
+		QUnit.todo( "Extending", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// INSTANCING
-		QUnit.test( "Instancing", ( assert ) => {
+		QUnit.todo( "Instancing", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
@@ -317,17 +294,17 @@ export default QUnit.module( 'Core', () => {
 
 	} );
 
-	QUnit.module.todo( 'Uint8BufferAttribute', () => {
+	QUnit.module( 'Uint8BufferAttribute', () => {
 
 		// INHERITANCE
-		QUnit.test( "Extending", ( assert ) => {
+		QUnit.todo( "Extending", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// INSTANCING
-		QUnit.test( "Instancing", ( assert ) => {
+		QUnit.todo( "Instancing", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
@@ -335,17 +312,17 @@ export default QUnit.module( 'Core', () => {
 
 	} );
 
-	QUnit.module.todo( 'Uint8ClampedBufferAttribute', () => {
+	QUnit.module( 'Uint8ClampedBufferAttribute', () => {
 
 		// INHERITANCE
-		QUnit.test( "Extending", ( assert ) => {
+		QUnit.todo( "Extending", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// INSTANCING
-		QUnit.test( "Instancing", ( assert ) => {
+		QUnit.todo( "Instancing", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
@@ -353,17 +330,17 @@ export default QUnit.module( 'Core', () => {
 
 	} );
 
-	QUnit.module.todo( 'Int16BufferAttribute', () => {
+	QUnit.module( 'Int16BufferAttribute', () => {
 
 		// INHERITANCE
-		QUnit.test( "Extending", ( assert ) => {
+		QUnit.todo( "Extending", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// INSTANCING
-		QUnit.test( "Instancing", ( assert ) => {
+		QUnit.todo( "Instancing", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
@@ -371,17 +348,17 @@ export default QUnit.module( 'Core', () => {
 
 	} );
 
-	QUnit.module.todo( 'Uint16BufferAttribute', () => {
+	QUnit.module( 'Uint16BufferAttribute', () => {
 
 		// INHERITANCE
-		QUnit.test( "Extending", ( assert ) => {
+		QUnit.todo( "Extending", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// INSTANCING
-		QUnit.test( "Instancing", ( assert ) => {
+		QUnit.todo( "Instancing", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
@@ -389,17 +366,17 @@ export default QUnit.module( 'Core', () => {
 
 	} );
 
-	QUnit.module.todo( 'Int32BufferAttribute', () => {
+	QUnit.module( 'Int32BufferAttribute', () => {
 
 		// INHERITANCE
-		QUnit.test( "Extending", ( assert ) => {
+		QUnit.todo( "Extending", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// INSTANCING
-		QUnit.test( "Instancing", ( assert ) => {
+		QUnit.todo( "Instancing", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
@@ -407,17 +384,17 @@ export default QUnit.module( 'Core', () => {
 
 	} );
 
-	QUnit.module.todo( 'Uint32BufferAttribute', () => {
+	QUnit.module( 'Uint32BufferAttribute', () => {
 
 		// INHERITANCE
-		QUnit.test( "Extending", ( assert ) => {
+		QUnit.todo( "Extending", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// INSTANCING
-		QUnit.test( "Instancing", ( assert ) => {
+		QUnit.todo( "Instancing", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
@@ -425,17 +402,17 @@ export default QUnit.module( 'Core', () => {
 
 	} );
 
-	QUnit.module.todo( 'Float32BufferAttribute', () => {
+	QUnit.module( 'Float32BufferAttribute', () => {
 
 		// INHERITANCE
-		QUnit.test( "Extending", ( assert ) => {
+		QUnit.todo( "Extending", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// INSTANCING
-		QUnit.test( "Instancing", ( assert ) => {
+		QUnit.todo( "Instancing", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
@@ -443,17 +420,17 @@ export default QUnit.module( 'Core', () => {
 
 	} );
 
-	QUnit.module.todo( 'Float64BufferAttribute', () => {
+	QUnit.module( 'Float64BufferAttribute', () => {
 
 		// INHERITANCE
-		QUnit.test( "Extending", ( assert ) => {
+		QUnit.todo( "Extending", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// INSTANCING
-		QUnit.test( "Instancing", ( assert ) => {
+		QUnit.todo( "Instancing", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 

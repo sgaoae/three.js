@@ -10,15 +10,10 @@ import {
 
 export default QUnit.module( 'Geometries', () => {
 
-	QUnit.module.todo( 'TextGeometry', ( hooks ) => {
+	QUnit.module( 'TextGeometry', ( hooks ) => {
 
 		var geometries = undefined;
 		hooks.beforeEach( function () {
-
-			// TODO: we cannot load any font from Threejs package :S
-			const parameters = {
-				font: undefined
-			};
 
 			geometries = [
 				new TextGeometry()
@@ -27,34 +22,32 @@ export default QUnit.module( 'Geometries', () => {
 		} );
 
 		// INHERITANCE
-		QUnit.test( "Extending", ( assert ) => {
+		QUnit.todo( "Extending", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// INSTANCING
-		QUnit.test( "Instancing", ( assert ) => {
+		QUnit.todo( "Instancing", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// OTHERS
-		QUnit.test( 'Standard geometry tests', ( assert ) => {
+		QUnit.todo( 'Standard geometry tests', ( assert ) => {
 
-			runStdGeometryTests( assert, geometries );
+			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 	} );
 
-	QUnit.module.todo( 'TextBufferGeometry', ( hooks ) => {
+	QUnit.module( 'TextBufferGeometry', ( hooks ) => {
 
 		var geometries = undefined;
 		hooks.beforeEach( function () {
-
-			const parameters = {};
 
 			geometries = [
 				new TextBufferGeometry()
@@ -63,23 +56,23 @@ export default QUnit.module( 'Geometries', () => {
 		} );
 
 		// INHERITANCE
-		QUnit.test( "Extending", ( assert ) => {
+		QUnit.todo( "Extending", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// INSTANCING
-		QUnit.test( "Instancing", ( assert ) => {
+		QUnit.todo( "Instancing", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// OTHERS
-		QUnit.test( 'Standard geometry tests', ( assert ) => {
+		QUnit.todo( 'Standard geometry tests', ( assert ) => {
 
-			runStdGeometryTests( assert, geometries );
+			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 

@@ -9,7 +9,7 @@ import { Matrix4 } from '../../../../src/math/Matrix4';
 
 export default QUnit.module( 'Cameras', () => {
 
-	QUnit.module.todo( 'PerspectiveCamera', () => {
+	QUnit.module( 'PerspectiveCamera', () => {
 
 		// see e.g. math/Matrix4.js
 		var matrixEquals4 = function ( a, b, tolerance ) {
@@ -36,69 +36,69 @@ export default QUnit.module( 'Cameras', () => {
 		};
 
 		// INHERITANCE
-		QUnit.test( "Extending", ( assert ) => {
+		QUnit.todo( "Extending", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// INSTANCING
-		QUnit.test( "Instancing", ( assert ) => {
+		QUnit.todo( "Instancing", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
 		// PUBLIC STUFF
-		QUnit.test( "isPerspectiveCamera", ( assert ) => {
+		QUnit.todo( "isPerspectiveCamera", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
-		QUnit.test( "copy", ( assert ) => {
+		QUnit.todo( "copy", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
-		QUnit.test( "setFocalLength", ( assert ) => {
+		QUnit.todo( "setFocalLength", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
-		QUnit.test( "getFocalLength", ( assert ) => {
+		QUnit.todo( "getFocalLength", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
-		QUnit.test( "getEffectiveFOV", ( assert ) => {
+		QUnit.todo( "getEffectiveFOV", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
-		QUnit.test( "getFilmWidth", ( assert ) => {
+		QUnit.todo( "getFilmWidth", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
-		QUnit.test( "getFilmHeight", ( assert ) => {
+		QUnit.todo( "getFilmHeight", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
-		QUnit.test( "setViewOffset", ( assert ) => {
+		QUnit.todo( "setViewOffset", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
 		} );
 
-		QUnit.test( "clearViewOffset", ( assert ) => {
+		QUnit.todo( "clearViewOffset", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
@@ -108,7 +108,7 @@ export default QUnit.module( 'Cameras', () => {
 
 			var cam = new PerspectiveCamera( 75, 16 / 9, 0.1, 300.0 );
 
-			// updateProjectionMatrix is called in contructor
+			// updateProjectionMatrix is called in constructor
 			var m = cam.projectionMatrix;
 
 			// perspective projection is given my the 4x4 Matrix
@@ -131,7 +131,7 @@ export default QUnit.module( 'Cameras', () => {
 
 		} );
 
-		QUnit.test( "toJSON", ( assert ) => {
+		QUnit.todo( "toJSON", ( assert ) => {
 
 			assert.ok( false, "everything's gonna be alright" );
 
